@@ -1,5 +1,8 @@
 # GodotUnit
 
+![GitHub Tag](https://img.shields.io/github/v/tag/markhj/godot-unit?label=version)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?label=license)
+
 **_GodotUnit_** is a small unit testing add-on for Godot, inspired by
 the likes of PHPUnit and JUnit.
 
