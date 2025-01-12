@@ -16,6 +16,8 @@ const FAILURE_ITEM: PackedScene = preload("res://tools/self-test/FailureItem.tsc
 func _ready():
 	var results: TestResult = TestRunner.new().run([
 		AssertEquals.new(),
+		AssertNull.new(),
+		AssertCount.new(),
 		Shorthands.new(),
 	])
 	

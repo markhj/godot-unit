@@ -136,6 +136,8 @@ the ``result.assertions`` property.
 | ``assert_false``      | The counter-part to ``assert_true``.                      |
 | ``assert_null``       | Checks if the actual value is (exactly) null.             |
 | ``assert_not_null``   | Checks if the actual value is anything but null.          |
+| ``assert_count``      | Checks the size of an array                               |
+| ``assert_empty``      | Short-hand to check if an array is empty.                 |
 
 ### Full signatures
 
@@ -146,6 +148,8 @@ assert_true(actual: bool, it: String = "")
 assert_false(actual: bool, it: String = "")
 assert_null(actual: Variant, it: String = "")
 assert_not_null(actual: Variant, it: String = "")
+assert_count(expected: int, iterable: Array, it: String = "")
+assert_empty(iterable: Array, it: String = "")
 ````
 
 ## 🌿 Extending
