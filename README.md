@@ -134,6 +134,8 @@ the ``result.assertions`` property.
 | ``assert_not_equals`` | Checks if the actual value does _not_ equal the expected. |
 | ``assert_true``       | Short-hand function which checks if the value is true.    |
 | ``assert_false``      | The counter-part to ``assert_true``.                      |
+| ``assert_null``       | Checks if the actual value is (exactly) null.             |
+| ``assert_not_null``   | Checks if the actual value is anything but null.          |
 
 ### Full signatures
 
@@ -142,6 +144,8 @@ assert_equals(expected: Variant, actual: Variant, it: String = "")
 assert_not_equals(expected: Variant, actual: Variant, it: String = "")
 assert_true(actual: bool, it: String = "")
 assert_false(actual: bool, it: String = "")
+assert_null(actual: Variant, it: String = "")
+assert_not_null(actual: Variant, it: String = "")
 ````
 
 ## 🌿 Extending

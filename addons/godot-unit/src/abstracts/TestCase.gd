@@ -33,6 +33,12 @@ func assert_true(actual: bool, it: String = "") -> AssertionMeta:
 func assert_false(actual: bool, it: String = "") -> AssertionMeta:
 	return _assert(not actual, false, actual, it)
 
+func assert_null(actual: Variant, it: String = "") -> AssertionMeta:
+	return _assert(actual == null, null, actual, it)
+
+func assert_not_null(actual: Variant, it: String = "") -> AssertionMeta:
+	return _assert(actual != null, null, actual, it)
+
 # Private helper function used as foundation for all assert_* functions.
 # It produces an AssertionMeta instance which is populated with data,
 # which can be used to identify where the assertion was made in case

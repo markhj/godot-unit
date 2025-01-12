@@ -19,3 +19,14 @@ func test_assert_true() -> void:
 func test_assert_false() -> void:
 	reflective(true, func(): return assert_false(false))
 	reflective(false, func(): return assert_false(true))
+	
+func test_assert_null() -> void:
+	reflective(true, func(): return assert_null(null))
+	reflective(false, func(): return assert_null(false))
+	reflective(false, func(): return assert_null(true))
+	reflective(false, func(): return assert_null(0))
+	reflective(false, func(): return assert_null(Node2D.new()))
+	
+func test_assert_not_null() -> void:
+	reflective(false, func(): return assert_not_null(null))
+	reflective(true, func(): return assert_not_null(true))
