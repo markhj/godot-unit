@@ -181,6 +181,23 @@ func my_custom_assert(expected: Variant, actual: Variant, it: String = "") -> As
 	return _assert(expected == actual, expected, actual, it)
 ````
 
+## 📋 Visual test summary
+
+The addon comes with an embeddable scene which can display test summaries
+in a neat way.
+To use it, you add ``addons/godot-unit/tools/test-summary/TestSummary.tscn``
+into the scene you use to run your tests. The next step is to add the results:
+
+````GDScript
+@onready var test_summary = $Path/To/TestSummaryScene
+
+func _ready() -> void:
+  # Run the tests
+  var results = ...
+  
+  test_summary.results = results
+````
+
 ## 🔬 Self-testing
 
 _GodotUnit_ has a "self-testing suite", which mainly relies on the
